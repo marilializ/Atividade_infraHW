@@ -21,7 +21,23 @@ class MiniCPU:
             op, a, b = self.fetch()
             self.decode_execute(op, a, b)
             self.trace(op, a, b)
-
+            
+    def decode_execute(self, op, a, b):
+        if   op == 0x01: self.reg[a] = self.mem[b]          # LOAD
+        elif op == 0x02: self.mem[b] = self.reg[a]          # STORE
+        elif op == 0x03:                                    # ADD
+            self.reg[a] = (self.reg[a] + self.reg[b]) & 0xFF
+        elif op == 0x04:                                    # SUB
+            self.reg[a] = (self.reg[a] - self.reg[b]) & 0xFF
+        elif op == 0x05: self.reg[a] = b                    # MOV
+        elif op == 0x06:                                    # CMP
+            self.zf = 1 if self.reg[a] == self.reg[b] else 0
+        elif op == 0x07: self.pc = a                        # JMP
+        elif op == 0x08:                                    # JZ
+            if self.zf: self.pc = a
+        elif op == 0x09:                                    # JNZ
+            if not self.zf: self.pc = a
+        elif op == 0x0A: self.running = False               # HALT
 
     #trace()
 
