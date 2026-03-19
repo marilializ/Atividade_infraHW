@@ -1,9 +1,8 @@
 # Atividade_infraHW
-<<<<<<< HEAD
-Atividade 19/03
+19/03
 =======
-Atividade 19/03 
->>>>>>> fa73d58967cfdea64e68ecfe7aa45c6f4fcc5f14
+
+
 
 ## Distribuicao de tarefas dos membros
 
