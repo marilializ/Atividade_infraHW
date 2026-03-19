@@ -1,8 +1,5 @@
 # Atividade_infraHW
 19/03
-=======
-
-
 
 ## Distribuicao de tarefas dos membros
 
@@ -22,7 +19,6 @@
 - Rodar o simulador com o exemplo da secao 5.1 (`MOV + ADD + HALT`) para validar antes do Fibonacci.
 - Validar que ao final `mem[0x20] == 13`.
 - Preparar a demonstracao para a apresentacao.
-<<<<<<< HEAD
 =======
 
 ### Integrantes 
@@ -31,4 +27,4 @@
 - Luiz Antônio Godoy
 - Marília Liz 
 - Victor Martins
->>>>>>> fa73d58967cfdea64e68ecfe7aa45c6f4fcc5f14
+
